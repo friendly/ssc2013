@@ -1,0 +1,57 @@
+\renewcommand{\FileName}{intro}
+\begin{comment}
+\begin{frame}
+  \frametitle{Introduction: The LM family and friends}
+  \framesubtitle{Models, graphical methods and opportunities}
+  \begin{itemize}
+    \item<1->{\large\bfseries LM family}
+      \begin{itemize*}
+	\item Classical univariate models: $\vec{y} = \mat{X} \vec{\beta} + \vec{\epsilon}$, with
+	  $\vec{\epsilon} \sim \mathcal{N} ( \vec{0}, \sigma^2 \mat{I})$,
+
+	  \item $\rightarrow$ regression, ANOVA, ANCOVA, response surface models, ...
+	  \item \alert{Many graphical methods}:  effect plots, spread-level plots, influence plots, ...
+	  \end{itemize*}
+    \item<2->{\large\bfseries GLM family}
+	\begin{itemize*}
+	\item Generalized univariate models: $g(\vec{y}) = \mat{X} \vec{\beta} + \vec{\epsilon}$, with
+	general variance function
+%	  $\vec{\epsilon} \sim \mathcal{N} ( \vec{0},  \mat{\Sigma})$,
+	\item $\rightarrow$ poisson regression, logistic regression, loglinear models
+	\item \alert{Some graphical methods}:  effect plots, fourfold plots, mosaic plots, half-normal plots, ...
+	\end{itemize*}
+    \item<3->{\large\bfseries MLM family}
+	\begin{itemize*}
+	\item Classical multivariate models: $\mat{Y} = \mat{X} \vec{B} + \mat{U}$, with
+	  $\mat{U} \sim \mathcal{N} ( \vec{0},  \mat{I} \otimes \mat{\Sigma})$,
+	\item $\rightarrow$ MANOVA, MMRA, MANCOVA, ...
+	\item \alert{Graphical methods}:  ???
+	\end{itemize*}
+    \item<4->{\large\bfseries MGLM family}: ??
+  \end{itemize}
+
+\end{frame}
+\end{comment}
+
+\begin{frame}
+  \frametitle{Introduction: The LM family and friends}
+  \framesubtitle{Models, graphical methods and opportunities}
+ \begin{center}
+  \includegraphics<1>[width=.95\textwidth,clip]{fig/models-table1}
+  \includegraphics<2>[width=.95\textwidth,clip]{fig/models-table2}
+  \includegraphics<3>[width=.95\textwidth,clip]{fig/models-table3}
+  \includegraphics<4>[width=.95\textwidth,clip]{fig/models-table4}
+ \end{center}
+
+ \begin{center}
+  \includegraphics<1>[height=.3\textheight,clip]{fig/scatterplot}
+  \includegraphics<1>[height=.3\textheight,clip]{fig/symbox}
+  \includegraphics<1>[height=.3\textheight,clip]{fig/prestige3D}
+  \includegraphics<2>[height=.3\textheight,clip]{fig/mosaic}
+  \includegraphics<2>[height=.3\textheight,clip]{fig/berk4f2}
+  \includegraphics<3-4>[height=.3\textheight,clip]{fig/empty}
+ \end{center}
+
+\end{frame}
+
+

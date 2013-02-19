@@ -1,0 +1,49 @@
+# Introduction
+
+## Visual overview: The LM family and friends
+
+%\begin{frame}
+%  \frametitle{Introduction: The LM family and friends}
+%  \framesubtitle{Models, graphical methods and opportunities}
+ \begin{center}
+  \includegraphics<1>[width=.95\textwidth,clip]{fig/models-table1}
+  \includegraphics<2>[width=.95\textwidth,clip]{fig/models-table2}
+  \includegraphics<3>[width=.95\textwidth,clip]{fig/models-table3}
+  \includegraphics<4>[width=.95\textwidth,clip]{fig/models-table4}
+ \end{center}
+
+ \begin{center}
+  \includegraphics<1>[height=.3\textheight,clip]{fig/scatterplot}
+  \includegraphics<1>[height=.3\textheight,clip]{fig/symbox}
+  \includegraphics<1>[height=.3\textheight,clip]{fig/prestige3D}
+  \includegraphics<2>[height=.3\textheight,clip]{fig/mosaic}
+  \includegraphics<2>[height=.3\textheight,clip]{fig/berk4f2}
+  \includegraphics<3-4>[height=.3\textheight,clip]{fig/empty}
+ \end{center}
+
+%\end{frame}
+
+## Visual overview: Multivariate data, $\mat{Y}_{n \times p}$
+
+## Visual overview: Multivariate LM, $\mat{Y} = \mat{X} \mat{B} + \mat{U}$
+
+\large{What is new here?}
+
+* 2 vars: HE plots--- data ellipses of $\mat{H}$ (fitted) and $\mat{E}$ (residual) SSP matrices
+* $p$ vars: HE plot matrix (all pairs)
+* $p$ vars: Canonical HE plots: Show max. $\mat{H}$ wrt $\mat{E}$ in a low-rank display
+
+## Visual overview: Extending these ideas
+
+* Robust methods
+* Influence measures and diagnostic plots for MLMs
+* Visualizing canonical correlation analysis 
+
+# Background
+
+## Data ellipses
+
+## 
+
+
+

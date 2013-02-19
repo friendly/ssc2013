@@ -1,0 +1,27 @@
+\begin{frame}[plain]
+  \frametitle{Canonical discriminant HE plots: Extensions}
+
+	\begin{itemize}
+      \item Canonical discriminant analysis usually applied only to 1-way designs
+	  \item MLM suggests several easy extensions to other MANOVA designs.
+		\begin{itemize*}
+		  \item<1> \textbf{High-order HE}  plots: Code factors interactively: Group = $A * B$
+		  \item<1> \implies $\mat{H} = \mat{H}_A + \mat{H}_B +\mat{H}_{AB}$ and 
+			 $\mat{E}=\mat{E}_w$ (within-cell error). 
+		  \item<2> \textbf{Marginal HE}  plots: e.g., A ignoring B
+		  \item<2> \implies  
+		 $\mat{H}=\mat{H}_A$ and $\mat{E} = \mat{H}_B +\mat{H}_{AB} + \mat{E}_w$ 
+		  \item<3> \textbf{Partial HE} effect plots: e.g., $AB \given (A, B) $
+		  \item<3> \implies
+		 $\mat{H}=\mat{H}_{AB} - \mat{H}_A - \mat{H}_A$ and $\mat{E} =\mat{E}_w$ 
+		\end{itemize*}
+	  
+	\end{itemize}
+	
+  \begin{center}	
+  \includegraphics<1>[width=.70\textwidth,clip]{fig/soils42}
+  \includegraphics<2>[width=.70\textwidth,clip]{fig/soils43}
+  \includegraphics<3>[width=.50\textwidth,clip]{fig/soils15}
+  \end{center}	
+\end{frame}
+

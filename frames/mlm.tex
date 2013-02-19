@@ -1,0 +1,78 @@
+\renewcommand{\FileName}{mlm}
+% slide template
+\begin{frame}
+  \frametitle{The univariate linear model}
+  \begin{itemize}
+	\item {\bfseries Model}: 
+	$\vec{y}_{n \times 1} = \mat{X}_{n \times q} \,\vec{\beta}_{q \times 1} + \vec{\epsilon}_{n \times 1}$,
+	with $\vec{\epsilon} \sim \mathcal{N} ( \vec{0}, \sigma^2 \mat{I}_n )$
+	\item {\bfseries LS estimates}:
+	$\hat{\beta} = {(\mat{X}\trans \mat{X})}^{-1} \mat{X}\trans \vec{y}$
+	\item {\bfseries General Linear Test}: $H_0 : \mat{C}_{h \times q} \,
+	 \vec{\beta}_{q \times 1} = \vec{0}$,
+	  where $\mat{C}= $ matrix of constants; rows specify $h$ linear combinations or contrasts of parameters.
+	  \item e.g., Test of $H_0 : \beta_1 = \beta_2 = 0$ in model $y_i = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \epsilon_i$
+	\begin{equation*}
+	\mat{C} \vec{\beta} = \left[
+	\begin{array}{rrr}
+    0  &  1  &  0 \\
+	0  &  0  &  1
+	\end{array}\right]
+	\left(
+	\begin{array}{l}
+	\beta_0 \\ \beta_1 \\ \beta_2
+	\end{array}
+	\right)
+	=
+	\left(
+	\begin{array}{l}
+	0 \\ 0
+	\end{array}
+	\right)
+	\end{equation*}
+	  \item All $\rightarrow$ F-test:  How big is $SS_H$ relative to $SS_E$?
+	\begin{equation*}
+F = \frac{SS_H / \textrm{df}_h}{SS_E / \textrm{df}_e} = \frac{MS_H}{MS_E} \longrightarrow
+  ( MS_H - F \: MS_E ) = 0
+	\end{equation*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The multivariate linear model}
+   \begin{itemize}
+	\item {\bfseries Model}: $\mat{Y}_{n \times p} = \mat{X}_{n \times q} \, \vec{B}_{q \times p} + \mat{U}$, for $p$ responses, $\mat{Y} = (\vec{y}_1 , \vec{y}_2, \dots , \vec{y}_p )$
+%      \begin{itemize*}
+	  \item {\bfseries General Linear Test}: $H_0 : \mat{C}_{h \times q} \, \vec{B}_{q \times p} = \mat{0}_{h \times p}$
+	  \item Analogs of sums of squares, $SS_H$ and $SS_E$ are $(p \times p)$ matrices, \H and \E,
+\begin{equation*}% \label{eq:hmat}
+\mat{H}  =
+ (\mat{C} \widehat{\mat{B}})\trans \,
+ [\mat{C} (\mat{X}\trans \mat{X} )^{-} \mat{C}\trans]^{-1} \,
+ (\mat{C} \widehat{\mat{B}})
+ \comma
+\end{equation*}
+\begin{equation*}% \label{eq:emat}
+\mat{E}  = \mat{U}\trans \mat{U} =
+ \mat{Y}\trans
+ [\mat{I} - \mat{H}]
+ \mat{Y}
+ \period
+\end{equation*}
+	\item Analog of univariate $F$ is
+\begin{equation*}%\label{eq:mtest1}
+ \det{ \mat{H} - \lambda \mat{E} } = 0
+ \comma
+\end{equation*}
+	\item How big is \H relative to \E ?
+	\begin{itemize*}
+	\item Latent roots $\lambda_1 , \lambda_2, \dots \lambda_s$ measure the ``size'' of \H relative to \E{} in $s=\min(p, df_h)$
+	orthogonal directions.
+	\item Test statistics (Wilks' $\Lambda$, Pillai trace criterion, Hotelling-Lawley trace criterion, Roy's maximum root)
+	all combine info across these dimensions
+	\end{itemize*}
+%	\item HE plot:  Shows size, dimensionality, and effect-correlation of \H relative to \E{}.
+%	  \end{itemize*}
+  \end{itemize}
+\end{frame}
+

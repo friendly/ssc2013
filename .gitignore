@@ -1,0 +1,32 @@
+# exclude file extensions
+*.webprj
+*.session
+*.bak
+*~
+*.sav
+*.tmp
+*.lst
+*.log
+*.backup
+*.blg
+*.brf
+*.out
+*.eml
+*.snm
+*0.sas
+*.DS_Store
+# special files
+tags
+Distfile
+.texlipse
+.project
+.directory
+# don't need old .eps files here
+fig/*.eps
+
+# exclude directories
+Test/
+Old/
+.svn/
+.notes/
+notes/

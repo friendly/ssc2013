@@ -1,0 +1,176 @@
+\renewcommand{\FileName}{dataellipse2}
+
+\begin{frame}
+  \frametitle{The Data Ellipse}
+  \begin{itemize}
+    \item{\large\bfseries Visual summary for bivariate marginal relations}
+      \begin{itemize*}
+	\item \textbf{Shows}: means, standard deviations, correlation, regression line(s)
+
+	  \item \textbf{Defined}:  set of points whose squared Mahalanobis distance $\le c^2$,
+\begin{equation*}
+D^2(\vec{y}) \equiv \dev{\vec{y}}\trans \, \inv{S} \, \dev{\vec{y}} \le c^2
+\end{equation*}
+$\mat{S}=$  sample variance-covariance matrix
+	  \item \textbf{Radius}: when $\vec{y}$ is  approx. bivariate normal,
+$D^2(\vec{y})$ has a large-sample $\chi^2_2$ distribution with 2 degrees of freedom.
+		\begin{itemize*}
+			\item $c^2 = \chi^2_2 (0.40) \approx 1$: 1 std. dev univariate ellipse-- 1D shadows: $\bar{y} \pm 1 s$
+			\item $c^2 = \chi^2_2 (0.68) = 2.28$: 1 std. dev bivariate ellipse
+			\item $c^2 = \chi^2_2 (0.95) \approx 6$: 95\% data ellipse, 1D shadows: Scheff\'e intervals
+			\item Small samples: $c^2 \approx 2 F_{2, n-2} (1-\alpha)$
+		\end{itemize*}
+	\item \textbf{Construction}:  Transform the unit circle, $\mathcal{U} = (\sin \vec{\theta}, \cos \vec{\theta})$,
+\begin{equation*}
+\mathcal{E}_c = \bar{\vec{y}} + c \half{S} \mathcal{U}
+\end{equation*}
+$\half{S}=$ any  ``square root'' of $\mat{S}$ (e.g., Cholesky)
+
+	\item \textbf{Robustify}:  Use robust estimate of $\mat{S}$, e.g., MVE (mimimum volume ellipsoid)
+	  \end{itemize*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}<handout>
+  \frametitle{Galton's data: Data Ellipses}
+  \begin{center}
+  \includegraphics[width=.9\textwidth,clip]{fig/galton-reg3}
+  \\ Galton's data on Parent \& Child height: \blue{40\%}, \red{68\%} and 95\% data ellipses
+  \end{center}
+\end{frame}
+
+\begin{frame}<beamer>
+  \frametitle{The Data Ellipse}
+  \begin{center}
+  \only<1>{%
+  \includegraphics[width=.9\textwidth,clip]{fig/galton-reg41}
+  \\ Galton's data on Parent \& Child height
+  }
+  \only<2>{%
+  \includegraphics[width=.9\textwidth,clip]{fig/galton-reg42}
+  \\ Data ellipse: Shows means, std. devs, regression lines, correlation
+  }
+  \only<3>{%
+  \includegraphics[width=.9\textwidth,clip]{fig/galton-reg43}
+  \\ Radii: $c^2=\chi^2_p (1-\alpha)$--- \blue{40\%}, \red{68\%} and 95\% data ellipses
+  }
+  \end{center}
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{The Data Ellipse}
+%   \begin{overlayarea}{\textwidth}{.3\textheight}
+%   \begin{itemize}
+%     \item{\large\bfseries Visual summary for bivariate marginal relations}
+%      \begin{itemize*}
+%      \only<1>{%
+% 	  \item \textbf{Shows}: means, standard deviations, correlation, regression line(s)
+% 
+% 	  \item \textbf{Defined}:  set of points whose squared Mahalanobis distance $\le c^2$,
+% 	\begin{equation*}
+% 	D^2(\vec{y}) \equiv \dev{\vec{y}}\trans \, \inv{S} \, \dev{\vec{y}} \le c^2
+% 	\end{equation*}
+%      $\mat{S}=$  sample variance-covariance matrix
+% 	  }
+%      \only<2>{%
+% 	  \item \textbf{Radius}: when $\vec{y}$ is  approx. bivariate normal,
+%         $D^2(\vec{y})$ has a large-sample $\chi^2_2$ distribution with 2 degrees of freedom.
+% 		\begin{itemize*}
+% 			\item $c^2 = \chi^2_2 (0.40) \approx 1$: 1 std. dev univariate ellipse-- 1D shadows: $\bar{y} \pm 1 s$
+% 			\item $c^2 = \chi^2_2 (0.68) = 2.28$: 1 std. dev bivariate ellipse
+% 			\item $c^2 = \chi^2_2 (0.95) \approx 6$: 95\% data ellipse, 1D shadows: Scheff\'e intervals
+% 			\item Small samples: $c^2 \approx 2 F_{2, n-2} (1-\alpha)$
+% 		\end{itemize*}
+% 	  \item \textbf{Construction}:  Transform the unit circle, $\mathcal{U} = (\sin \vec{\theta}, \cos \vec{\theta})$,
+% 		\begin{equation*}
+% 		\mathcal{E}_c = \bar{\vec{y}} + c \half{S} \mathcal{U}
+% 		\end{equation*}
+% 		$\half{S}=$ any  ``square root'' of $\mat{S}$ (e.g., Cholesky)
+% 
+% 	\item \textbf{Robustify}:  Use robust estimate of $\mat{S}$, e.g., MVE (mimimum volume ellipsoid)
+% 	}
+% 	  \end{itemize*}
+%   \end{itemize}
+%   \end{overlayarea}
+% 
+%   \begin{overlayarea}{\textwidth}{.6\textheight}
+%   \begin{center}
+%   \only<1>{\includegraphics[width=.8\textwidth,clip]{fig/galton-reg41}}
+%   \only<2>{\includegraphics[width=.8\textwidth,clip]{fig/galton-reg42}}
+%   \only<3>{\includegraphics[width=.8\textwidth,clip]{fig/galton-reg43}}
+%   \end{center}
+%   \end{overlayarea}
+% \end{frame}
+
+
+\begin{frame}<beamer>
+  \frametitle{Iris data: \scatmat}
+  \begin{center}
+  \includegraphics[height=.8\textheight,clip]{fig/scatirise}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}<beamer>
+  \frametitle{Iris data: \scatmat $+$ data ellipses}
+  \begin{center}
+  \includegraphics[height=.8\textheight,clip]{fig/scatirisd1}
+  \end{center}
+\end{frame}
+
+\begin{frame}<beamer>
+  \frametitle{Iris data: \scatmat $+$  ellipses $-$ data}
+  \begin{center}
+  \includegraphics[height=.8\textheight,clip]{fig/scatirisd3}
+  \\ General idea: Sufficient visual summaries
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Didactic displays: Simpson's paradox}
+\begin{center}
+%  \includegraphics[width=.98\textwidth,clip]{fig/contiris3}
+  \begin{columns}[T]
+    \begin{column}{.32\textwidth}
+	    \includegraphics<1->[width=\textwidth,clip]{fig/contiris41}
+    \end{column}
+    \begin{column}{.32\textwidth}
+	    \includegraphics<2->[width=\textwidth,clip]{fig/contiris42}
+    \end{column}
+    \begin{column}{.32\textwidth}
+	    \includegraphics<3->[width=\textwidth,clip]{fig/contiris43}
+    \end{column}
+  \end{columns}
+\end{center}
+ \begin{itemize*}
+   \item<1-> Marginal relations: ignore other factors, covariates (species)
+   \item<2-> Conditional relations: control or adjust for other factors, covariates
+   \item<2-> Simpson's paradox:  when these differ in direction.
+   \item<3-> Pooled within-sample scatter: $  \mat{S}_{\textrm{pooled}}
+  =(N - g)^{-1}
+  \sum_{i=1}^g
+  (n_i - 1) \mat{S}_i$
+  \item<3-> Visual assessment of equal covariance matrices,
+$\Sigma_1 = \Sigma_2 = \dots = \Sigma_g$
+
+ \end{itemize*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Partial plots: Visualize within-group scatter}
+\begin{center}
+  \includegraphics[height=.8\textheight,clip]{fig/scatirisd2}
+  \\ General idea: Visualize \emph{conditional} covariation, 
+   $\VAR(\mat{Y} \given \mat{X})$
+\end{center}
+\end{frame}
+
+\begin{frame}<beamer>
+  \frametitle{Partial plots: Visualize within-group scatter \emph{alone}}
+\begin{center}
+  \includegraphics[height=.8\textheight,clip]{fig/scatirisd4}
+ \\ General idea: Sufficient visual summaries
+\end{center}
+\end{frame}
+
+

@@ -1,0 +1,88 @@
+%<TpX v="3" l="10.1759" t="100.399" r="156.1" b="47.8" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" PicScale="1" Border="2" PicUnitLength="0.05" HatchingStep="2" DottedSize="0.5" DashSize="1" TeXMinLine="0.1" LineWidth="0.3">
+%  <rect x="15.0602" y="55.0602" w="20.241" h="40.241"/>
+%  <rect x="49.0361" y="55.3012" w="11.3253" h="40"/>
+%  <rect x="65.1807" y="85.1807" w="19.759" h="9.87952"/>
+%  <text x="23.494" y="75.0602" t="Y" h="7"/>
+%  <text x="53.3735" y="74.5783" t="A" h="7"/>
+%  <text x="73.3735" y="87.8313" t="B&apos;" h="7"/>
+%  <text x="40.3614" y="74.8193" t="=" h="5"/>
+%  <line x1="115.301" y1="95.3012" x2="115" y2="50"/>
+%  <line x1="110" y1="55" x2="155" y2="55"/>
+%  <text x="129" y="49" t="Dim 1" h="5"/>
+%  <text x="113" y="66" t="Dim 2" h="5" rotdeg="90"/>
+%  <line x1="115" y1="55" x2="150" y2="70" arr2="h44" arrs="2" lw="2.00" lc="red"/>
+%  <text x="113" y="66" t="Dim 2" h="5" rotdeg="90"/>
+%  <line x1="115" y1="55" x2="150" y2="70" arr2="h44" arrs="2" lw="2.00" lc="red"/>
+%  <line x1="115" y1="55" x2="95" y2="75" arr2="h44" arrs="2" lw="2.00" lc="red"/>
+%  <line x1="115" y1="55" x2="134" y2="90" arr2="h44" arrs="2" lw="2.00" lc="red"/>
+%  <line x1="115" y1="55" x2="91" y2="51" arr2="h44" arrs="2" lw="2.00" lc="red"/>
+%  <line x1="70" y1="95" x2="70" y2="85" li="dash" lc="red"/>
+%  <line x1="67" y1="95" x2="67" y2="85" li="dash" lc="red"/>
+%  <text x="66.9918" y="96.4869" t="V2" h="4" lc="red"/>
+%  <text x="13.9759" y="65.3253" t="observations" h="5" rotdeg="90"/>
+%  <text x="16.0798" y="96.599" t="variables" h="5"/>
+%  <star x="124" y="82" lc="blue"/>
+%  <star x="137" y="75" lc="blue"/>
+%  <star x="111" y="63" lc="blue"/>
+%  <star x="104" y="82" lc="blue"/>
+%  <text x="133" y="91" t="V1" h="5"/>
+%  <text x="150" y="69" t="V2" h="5"/>
+%  <text x="89" y="75" t="V3" h="5"/>
+%  <text x="84" y="49" t="V4" h="5"/>
+%  <line x1="49" y1="85" x2="60" y2="85" li="dash" lc="blue"/>
+%  <line x1="49" y1="82" x2="60" y2="82" li="dash" lc="blue" hc="blue"/>
+%  <text x="44" y="82" t="o3" h="4" lc="blue"/>
+%  <text x="137.476" y="75.6192" t="o3" h="4" lc="blue"/>
+%  <line x1="137" y1="75" x2="141" y2="66" arr2="h43"/>
+%  <star x="134.159" y="58.5689" lc="blue"/>
+%  <line x1="136.917" y1="75.1163" x2="128.806" y2="79.0098" arr2="h43"/>
+%  <star x="108.762" y="52.1726" lc="blue"/>
+%  <star x="149.709" y="61.663" lc="blue"/>
+%  <star x="94.8755" y="64.9076" lc="blue"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{0.05 mm}
+  \begin{picture}(2998.5, 1132.0)(0,0)
+  \put(0,0){\includegraphics{biplotdemo.pdf}}
+  \put(306.4, 547.4){\fontsize{19.92}{23.90}\selectfont \makebox(100.8, 140.0)[l]{Y\strut}}
+  \put(904.0, 537.8){\fontsize{19.92}{23.90}\selectfont \makebox(100.8, 140.0)[l]{A\strut}}
+  \put(1304.0, 802.8){\fontsize{19.92}{23.90}\selectfont \makebox(116.2, 140.0)[l]{B'\strut}}
+  \put(643.7, 553.4){\fontsize{14.23}{17.07}\selectfont \makebox(56.0, 100.0)[l]{=\strut}}
+  \put(2416.5, 37.0){\fontsize{14.23}{17.07}\selectfont \makebox(253.0, 100.0)[l]{Dim~1\strut}}
+  \put(2020.5, 404.0){\rotatebox{90.00}{\fontsize{14.23}{17.07}\selectfont \makebox(253.0, 100.0)[l]{Dim~2\strut}}}
+  \put(2020.5, 404.0){\rotatebox{90.00}{\fontsize{14.23}{17.07}\selectfont \makebox(253.0, 100.0)[l]{Dim~2\strut}}}
+  \put(1176.3, 992.1){\fontsize{11.38}{13.66}\selectfont \textcolor[rgb]{1, 0, 0}{\makebox(97.6, 80.0)[l]{V2\strut}}}
+  \put(40.0, 390.5){\rotatebox{90.00}{\fontsize{14.23}{17.07}\selectfont \makebox(505.0, 100.0)[l]{observations\strut}}}
+  \put(158.1, 989.0){\fontsize{14.23}{17.07}\selectfont \makebox(360.0, 100.0)[l]{variables\strut}}
+  \put(2496.5, 877.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V1\strut}}
+  \put(2836.5, 437.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V2\strut}}
+  \put(1616.5, 557.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V3\strut}}
+  \put(1516.5, 37.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V4\strut}}
+  \put(716.5, 702.4){\fontsize{11.38}{13.66}\selectfont \textcolor[rgb]{0, 0, 1}{\makebox(80.0, 80.0)[l]{o3\strut}}}
+  \put(2586.0, 574.8){\fontsize{11.38}{13.66}\selectfont \textcolor[rgb]{0, 0, 1}{\makebox(80.0, 80.0)[l]{o3\strut}}}
+  \end{picture}
+\else
+  \setlength{\unitlength}{0.05 mm}
+  \begin{picture}(2998.5, 1132.0)(0,0)
+  \put(0,0){\includegraphics{fig/biplotdemo}}
+  \put(306.4, 547.4){\fontsize{19.92}{23.90}\selectfont \makebox(100.8, 140.0)[l]{Y\strut}}
+  \put(904.0, 537.8){\fontsize{19.92}{23.90}\selectfont \makebox(100.8, 140.0)[l]{A\strut}}
+  \put(1304.0, 802.8){\fontsize{19.92}{23.90}\selectfont \makebox(116.2, 140.0)[l]{B$\trans$\strut}}
+  \put(643.7, 553.4){\fontsize{14.23}{17.07}\selectfont \makebox(56.0, 100.0)[l]{$\approx$\strut}}
+  \put(2416.5, 37.0){\fontsize{14.23}{17.07}\selectfont \makebox(253.0, 100.0)[l]{Dim~1\strut}}
+  \put(2020.5, 404.0){\rotatebox{90.00}{\fontsize{14.23}{17.07}\selectfont \makebox(253.0, 100.0)[l]{Dim~2\strut}}}
+  \put(2020.5, 404.0){\rotatebox{90.00}{\fontsize{14.23}{17.07}\selectfont \makebox(253.0, 100.0)[l]{Dim~2\strut}}}
+  \put(1176.3, 992.1){\fontsize{11.38}{13.66}\selectfont \textcolor[rgb]{1, 0, 0}{\makebox(97.6, 80.0)[l]{V2\strut}}}
+  \put(40.0, 390.5){\rotatebox{90.00}{\fontsize{14.23}{17.07}\selectfont \makebox(505.0, 100.0)[l]{observations\strut}}}
+  \put(158.1, 989.0){\fontsize{14.23}{17.07}\selectfont \makebox(360.0, 100.0)[l]{variables\strut}}
+  \put(2496.5, 877.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V1\strut}}
+  \put(2836.5, 437.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V2\strut}}
+  \put(1616.5, 557.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V3\strut}}
+  \put(1516.5, 37.0){\fontsize{14.23}{17.07}\selectfont \makebox(122.0, 100.0)[l]{V4\strut}}
+  \put(716.5, 702.4){\fontsize{11.38}{13.66}\selectfont \textcolor[rgb]{0, 0, 1}{\makebox(80.0, 80.0)[l]{o3\strut}}}
+  \put(2586.0, 574.8){\fontsize{11.38}{13.66}\selectfont \textcolor[rgb]{0, 0, 1}{\makebox(80.0, 80.0)[l]{o3\strut}}}
+  \end{picture}
+\fi
+\end{figure}

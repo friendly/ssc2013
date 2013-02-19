@@ -1,0 +1,175 @@
+\documentclass[10pt,t]{beamer}
+%\documentclass[10pt,t,handout]{beamer}
+%\usetheme{Berkeley}
+\setbeamertemplate{navigation symbols}{}
+
+\mode<presentation>
+{
+  \usetheme{Copenhagen}
+  \useoutertheme{infolines}
+  \setbeamercovered{transparent}
+%  \setbeamercovered{dynamic}
+  % or whatever (possibly just delete it)
+%\setbeamercolor{alerted text}{fg=blue!80!black}
+%\addfootbox{structure}{\tiny \Filename}
+}
+
+\mode<handout>
+{
+  \usetheme{Malmoe}
+% No footline on title slide
+\defbeamertemplate{footline}{title slide}{%
+	\relax
+}
+\setbeamertemplate{footline}[title slide]
+}
+
+\title{\small{Recent Advances in Visualizing Multivariate Linear Models}}
+%\subtitle{2013 SSC Annual Meeting}
+\author[Friendly, Sigal]{Michael Friendly \and Matthew Sigal}
+\titlegraphic{
+ \rule[-4pt]{0.5pt}{4pt}\hrulefill\rule[-4pt]{0.5pt}{4pt}\\
+ \begin{minipage}[c]{.3\textwidth}
+  \includegraphics[width=1\linewidth,clip]{figures/pottery-HE2b}
+ \end{minipage}
+ \hfill
+ \begin{minipage}[c]{.3\textwidth}
+  \includegraphics[width=1\linewidth,clip]{fig/rohwer1-1}
+  \end{minipage}%
+ \hfill
+ \begin{minipage}[c]{.3\textwidth}
+  \includegraphics[width=1\linewidth,clip]{fig/plastic1-3b}
+ \end{minipage}
+%  \rule{0.5pt}{4pt}\hrulefill\rule{0.5pt}{4pt} \\
+}
+%\institute{York University}
+\date[SSC] % (optional)
+{May 26--29, 2013, SSC annual Meeting}
+
+
+\subject{Visualizing MLMs}
+
+
+% enables straight single quote
+\makeatletter
+\let \@sverbatim \@verbatim
+\def \@verbatim {\@sverbatim \verbatimplus}
+{\catcode`'=13 \gdef \verbatimplus{\catcode`'=13 \chardef '=13 }}
+\makeatother
+
+% enables backticks in verbatim
+\makeatletter
+{\catcode`\`=13
+\xdef\@verbatim{\unexpanded\expandafter{\@verbatim}\chardef\noexpand`=18 }
+}
+\makeatother
+
+\input{defs}  %% standard math, color and other latex defs
+
+
+\begin{document}
+\begin{frame}
+\titlepage
+%\begin{itemize*}
+%\item \url{http://datavis.ca}
+%\item \url{https://github.com/friendly/vis-mlm}
+%\end{itemize*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+	\begin{columns}[c]
+	  \begin{column}{.6\textwidth}
+	  \tableofcontents
+	  \end{column}
+	  \begin{column}{.4\textwidth}
+	  \includegraphics[width=\textwidth]{figures/pottery-HE3}
+	  \end{column}
+	\end{columns}
+	\begin{center}
+	  Slides: \url{http://datavis.ca/papers/ssc2013/}
+	\end{center}
+\end{frame}
+
+\section{Background}
+%\subsection{The LM family and friends}
+\subsection{Visual overview}
+\input{frames/intro}
+\input{frames/overview}
+\input{frames/extensions}
+\subsection{Data ellipses}
+\input{frames/dataellipse3}
+%\subsection{Biplots}
+%\input{frames/biplot2}
+\subsection{The Multivariate Linear Model}
+\input{frames/mlm}
+%\input{frames/software}
+\subsection{Motivating example}
+\input{frames/pottery0}
+
+\section{Hypothesis-Error (HE) plots}
+\begin{frame}<beamer>
+  \frametitle{Outline}
+	\begin{columns}[c]
+	  \begin{column}{.6\textwidth}
+	  \tableofcontents[currentsection,currentsubsection]
+	  \end{column}
+	  \begin{column}{.4\textwidth}
+	  \includegraphics[width=\textwidth]{figures/pottery-HE2b}
+	  \end{column}
+	\end{columns}
+\end{frame}
+  % You might wish to add the option [pausesections]
+\subsection{Visualizing H and E (co)variation}
+\input{frames/heplot-ideas}
+\subsection{MANOVA designs}
+\input{frames/pottery1a}
+\subsection{MREG designs}
+\input{frames/mreg}
+
+\section{Reduced-rank displays}
+\begin{frame}<beamer>
+  \frametitle{Outline}
+	\begin{columns}[c]
+	  \begin{column}{.6\textwidth}
+	  \tableofcontents[currentsection]
+%	  \tableofcontents[currentsection,currentsubsection]
+	  \end{column}
+	  \begin{column}{.4\textwidth}
+% TODO: replace this figure
+	  \includegraphics[width=\textwidth]{fig/bipliris}
+	  \end{column}
+	\end{columns}
+\end{frame}
+\subsection{Low-D displays of high-D data}
+\input{frames/projection}
+%\subsection{Biplots}
+%\input{frames/biplot2}
+\subsection{Canonical discriminant HE plots}
+\input{frames/canonical}
+
+\section{Recent extensions}
+\begin{frame}<beamer>
+  \frametitle{Outline}
+	\begin{columns}[c]
+	  \begin{column}{.6\textwidth}
+	  \tableofcontents[currentsection]
+%	  \tableofcontents[currentsection,currentsubsection]
+	  \end{column}
+	  \begin{column}{.4\textwidth}
+	  \includegraphics[width=\textwidth]{figures/pottery-robust}
+	  \end{column}
+	\end{columns}
+\end{frame}
+\subsection{Robust MLMs}
+\input{frames/robust}
+\subsection{Influence diagnostics for MLMs}
+\input{frames/mvinfluence}
+
+\section{Conclusions}
+\input{frames/conclusions}
+
+%\input{body}
+
+\end{document}
+

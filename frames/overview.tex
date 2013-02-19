@@ -1,0 +1,54 @@
+\begin{frame}
+  \frametitle{Visual overview: Multivariate data, $\mat{Y}_{n \times p}$}
+  {\Large What we know how to do well (almost)}
+	\begin{itemize}
+		\item<1->2 vars: Scatterplot \only<2->{$+$ annotations (data ellipses)}
+		\item<3->$p$ vars: Scatterplot matrix (all pairs)
+		\item<4->$p$ vars: Reduced-rank display-- show max. total variation \implies biplot
+	\end{itemize}
+  
+  \begin{columns}[T]
+    \begin{column}{.32\textwidth}
+	    \includegraphics<1>[width=\textwidth,clip]{fig/contiris2a1}
+	    \includegraphics<2->[width=\textwidth,clip]{fig/contiris2a2}
+    \end{column}
+    \begin{column}{.32\textwidth}
+	    \includegraphics<3->[width=\textwidth,clip]{fig/scatirisd1}
+    \end{column}
+    \begin{column}{.32\textwidth}
+	    \includegraphics<4->[width=\textwidth,clip]{fig/bipliris}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Visual overview: Multivariate linear model, $\mat{Y} = \mat{X} \, \mat{B} + \mat{U}$}
+  {\Large What is new here?}
+	\begin{itemize}
+		\item<1->2 vars: HE plot--- data ellipses of \H (fitted) and \E (residual) SSP matrices
+		\item<2->$p$ vars: HE plot matrix (all pairs)
+		\item<3->$p$ vars: Reduced-rank display--- show max. \H wrt. \E \implies Canonical HE plot
+	\end{itemize}
+  \begin{columns}[c]
+    \begin{column}{.3\textwidth}
+%		\begin{itemize}
+%			\item<1->2 vars: HE plot
+%		\end{itemize}
+	    \includegraphics<1->[width=\textwidth,clip]{fig/heplotiris}
+    \end{column}
+    \begin{column}{.3\textwidth}
+%		\begin{itemize}
+%			\item<2->$p$ vars: HE plot matrix
+%		\end{itemize}
+%		\vspace{1ex}
+	    \includegraphics<2->[width=\textwidth,clip]{fig/hematiris}
+    \end{column}
+    \begin{column}{.3\textwidth}
+%		\begin{itemize}
+%			\item<3->$p$ vars: Canonical HE plot
+%		\end{itemize}
+	    \includegraphics<3->[width=\textwidth,clip]{fig/hecaniris}
+    \end{column}
+  \end{columns}
+\end{frame}
+

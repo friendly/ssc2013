@@ -1,0 +1,90 @@
+\begin{frame}[containsverbatim]
+	\frametitle{Example: Two-way MANOVA-- Plastic film data}
+
+  \begin{itemize}
+  	\item Data from an experiment to deterimne the optimal conditions
+	for extruding plastic film.
+	\begin{itemize*}
+		\item Factors: Rate of extrusion (low/high), amount of
+		additive (low/high)
+		\item Responses: Tear resistance, film gloss, opacity
+		\item $\rightarrow$ $2 \times 2$ MANOVA design, 3 responses, $n=5$ per
+		cell.
+	\end{itemize*}
+
+	\item HE plots show main effects, interactions and linear hypotheses
+	in relation to each other 
+  \end{itemize}
+\begin{CodeInput}
+R> plastic.mod <- lm(cbind(tear, gloss, opacity) ~ 
+		rate*additive, data=Plastic)
+R> Manova(plastic.mod, test.statistic="Roy")
+\end{CodeInput}
+\begin{CodeOutput}[fontsize=\small]
+Type II MANOVA Tests: Roy test statistic
+              Df test stat approx F num Df den Df   Pr(>F)   
+rate           1    1.6188   7.5543      3     14 0.003034 **
+additive       1    0.9119   4.2556      3     14 0.024745 * 
+rate:additive  1    0.2868   1.3385      3     14 0.301782   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+\end{CodeOutput}
+	\end{frame}
+
+\begin{frame}
+  \frametitle{Example: Two-way MANOVA-- Plastic film data}
+  \begin{columns}[T]
+    \begin{column}{.4\textwidth}
+		\begin{itemize}
+			\item<1-> Main effects \& interaction-- evidence scaling
+			\item<1-> Only effect of \texttt{rate} exceeds the \E ellipse. Why?
+			\item<2-> Main effects \& interaction-- effect scaling
+		\end{itemize}
+    \end{column}
+    \begin{column}{.6\textwidth}
+    \includegraphics<1>[width=\textwidth,clip]{fig/plastic1-1a}
+    \includegraphics<2>[width=\textwidth,clip]{fig/plastic1-1b}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}<beamer>
+%  \frametitle{Example: Two-way MANOVA-- Plastic film data}
+  \frametitle{Testing linear hypotheses}
+  \begin{columns}[T]
+    \begin{column}{.4\textwidth}
+		\begin{itemize}
+			\item<1-> Test composite hypotheses:
+			\item<1-> \texttt{Group = rate * additive} (3 df)
+			\item<2-> \texttt{Main = rate + additive} (2 df)
+		\end{itemize}
+    \end{column}
+    \begin{column}{.6\textwidth}
+    \includegraphics<1>[width=\textwidth,clip]{fig/plastic1-2a}
+    \includegraphics<2>[width=\textwidth,clip]{fig/plastic1-2b}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{3D HE plots}
+%  \framesubtitle{3D HE plots}
+  \begin{columns}[T]
+    \begin{column}{.4\textwidth}
+		\begin{itemize}
+			\item<1-> 3D HE plot shows ellipsoids for \H and \E matrices
+			\item<1-> 1 df hypotheses \implies lines
+			\item<2-> 2 df hypotheses \implies ellipses
+			\item<2->\texttt{heplot3d} function provides interactive
+			rotation
+			\item<2->This view shows the significant main effects of
+			\texttt{rate} and \texttt{additive}
+		\end{itemize}
+    \end{column}
+    \begin{column}{.6\textwidth}
+    \includegraphics<1>[width=\textwidth,clip]{fig/plastic1-3a}
+    \includegraphics<2>[width=\textwidth,clip]{fig/plastic1-3b}
+    \end{column}
+  \end{columns}
+\end{frame}
+

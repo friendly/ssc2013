@@ -1,0 +1,74 @@
+\usepackage[comma]{natbib}
+\bibliographystyle{abbrvnat-last}
+\usepackage{comment}
+%\usepackage{times}
+\usepackage{mdwlist}
+\usepackage{xcolor}
+
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{multimedia}
+
+% Math stuff
+\newcommand{\given}{\ensuremath{\, | \,}}
+\renewcommand*{\vec}[1]{\ensuremath{\bm{#1}}}
+\newcommand*{\mat}[1]{\ensuremath{\bm{#1}}}
+\newcommand{\trans}{\ensuremath{^\mathsf{T}}}
+\newcommand*{\diag}[1]{\ensuremath{\mathrm{diag} (#1)}}
+\def\binom#1#2{{#1 \choose #2}}%
+\newcommand*{\degree}[1]{\ensuremath{{#1}^{\circ}}}
+\renewcommand{\implies}{ \ensuremath{\mapsto} }
+\newcommand*{\dev}[1]{(#1 - \bar{#1})}
+\renewcommand*{\det}[1]{\mathrm{det}(#1)}
+\newcommand*{\inv}[1]{\ensuremath{\mat{#1}^{-1}}}
+\newcommand*{\half}[1]{\ensuremath{\mat{#1}^{1/2}}}
+\newcommand*{\nvec}[2]{\ensuremath{{#1}_{1}, {#1}_{2},\ldots,{#1}_{#2}}}
+\newcommand*{\Beta}{B}
+\newcommand*{\Epsilon}{E}
+\renewcommand*{\H}{\mat{H} }      % what am I overriding here?
+\newcommand*{\E}{\mat{E} }
+\newcommand*{\period}{\:\: .}
+\newcommand*{\comma}{\:\: ,}
+\newcommand{\VAR}{\mathsf{VAR}}
+\newcommand*{\widebar}[1]{\overline{#1}}
+
+% colors
+\newcommand*{\red}[1]{{\color{red}#1}}
+\newcommand*{\blue}[1]{{\color{blue}#1}}
+\newcommand*{\black}[1]{{\color{black}#1}}
+\newcommand*{\green}[1]{{\color{green}#1}}
+\newcommand*{\yellow}[1]{{\color{yellow}#1}}
+\newcommand*{\gold}[1]{{\color{yellow!50!orange}#1}}
+%\newcommand*{\yellow}[1]{\fcolorbox{gray}{black}{\color{yellow}#1}}
+\newcommand*{\yellowbg}[1]{\fcolorbox{gray}{yellow}{#1}}
+%\newcommand*{\yellow}[1]{{\color{yellow}#1}}
+\newcommand*{\purple}[1]{{\color{purple}#1}}
+
+% from sasnames.sty
+\newcommand{\scat} {scatterplot}
+\newcommand{\scats} {scatterplots}
+\newcommand{\scatmat} {\scat{} matrix}
+\newcommand{\df} {degrees of freedom}
+\newcommand{\PROC}[1]{{\texttt{PROC #1}}}
+
+\let\code=\texttt
+\let\proglang=\textsf
+\newcommand{\pkg}[1]{{\normalfont\fontseries{b}\selectfont #1}}
+\newcommand{\package}[1]{\pkg{#1} package}
+
+
+\newcommand*{\LM}{LM}
+\newcommand*{\MLM}{MLM}
+\newcommand*{\R}{\proglang{R}}
+
+%\renewenvironment{equation*}{\displaymath}{\enddisplaymath}%
+\newcommand{\FileName}{}
+\newcommand{\inlong}{none}
+
+\usepackage{fancyvrb}
+% Displayed code
+\DefineVerbatimEnvironment{Code}{Verbatim}{}
+\DefineVerbatimEnvironment{CodeInput}{Verbatim}{fontseries=b,fontshape=sl,formatcom=\color{red}}
+\DefineVerbatimEnvironment{CodeOutput}{Verbatim}{fontseries=b,fontsize=\small,formatcom=\color{blue}}
+
+\newtheorem{conjecture}[theorem]{Conjecture}

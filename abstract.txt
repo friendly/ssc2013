@@ -1,0 +1,32 @@
+2013 SSC Annual Meeting
+
+Title: Recent Advances in Visualization for Multivariate Linear Models
+
+Authors:  
+	Michael Friendly, York University <friendly@yorku.ca>
+	Matthew Sigal, York University <matthewsigal@gmail.com>
+	
+Abstract:
+
+This talk surveys our work in the development of visualization methods 
+implemented in R for understanding and interpreting the effects of 
+predictors in multivariate linear models (MLMs) of the form
+$$ \mat{Y} = \mat{X} \mat{B} + \mat{E}$$.
+
+We begin with a description and examples of the HE plot framework
+implemented in the \pkg{heplots}, wherein multivariate tests can be
+visualized via ellipsoids for Hypothesis and Error SSP matrices
+used in numerical tests.  These ideas extend naturally to repeated
+measures designs in the multivariate context.
+
+When the rank of the hypothesis matrix for a term exceeds 2,
+these effects can also be visualized in a reduced-rank canonical
+space via the \pkg{candisc}.
+
+Finally, we discuss some recent work-in-progress: the extension of these
+methods to robust MLMs, and the development of generalizations of
+influence measures and diagnostic plots for MLMs in the
+\pkg{mvinfluence}.
+
+
+
