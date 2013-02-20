@@ -14,7 +14,7 @@
     \item Calculation for multivariate analogs of univariate influence measures
     (following Barrett \& Ling, 1992)
     \item Provides deletion diagnostics for subsets of size $m \ge 1$.
-    \item e.g., $m=2$ can reveal cases of \alert{masking}.
+    \item e.g., $m=2$ can reveal cases of \alert{masking} or \alert{joint influence}.
     \item Extension of \code{influencePlot()} to the multivariate case.
     \item A new plot format: leverage-residual (LR) plots.
     \end{itemize}
@@ -27,11 +27,34 @@
 
 % two figs side-by-side
   \begin{minipage}[c]{.5\textwidth}
-   \includegraphics[width=1\linewidth,clip]{figures/rohwer-influence-cookd.pdf}
+   \includegraphics[width=1\linewidth,clip]{figures/rohwer-influence-cookd}
+   \\ \centering Cook's $D$ vs. generalized Hat value
    \end{minipage}%
   \hfill
   \begin{minipage}[c]{.5\textwidth}
-   \includegraphics[width=1\linewidth,clip]{figures/rohwer-influence-LR.pdf}
+   \includegraphics[width=1\linewidth,clip]{figures/rohwer-influence-LR}
+   \\ \centering Leverage - Residual (LR) plot
   \end{minipage}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Influence diagnostics for MLMs: LR plots}
+
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+	  \begin{itemize}
+	    \item Main idea: Influence $\sim$ Leverage (L) $\times$ Residual (R)
+			\item $\implies log (\mathrm{Infl}) = log(L) + log(R)$
+			\item $\implies$ contours of constant influence 
+			lie on lines with slope = -1.
+			\item Bubble size $\sim$ influence (Cook's $D$)
+			\item This simplifies interpretation of influence measures
+	  \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    \includegraphics<1>[width=\textwidth,clip]{figures/rohwer-influence-LR}
+    \end{column}
+  \end{columns}
 
 \end{frame}
