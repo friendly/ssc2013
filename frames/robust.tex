@@ -16,10 +16,10 @@
     \item Weights: calculated from Mahalanobis squared distances, using
     a simple robust covariance estimator, \code{MASS::cov.trob()}
     and a weight function, $\psi (D^2)$.
-    \[
+    \begin{equation}
     D^2 = (\mat{Y} - \widehat{\mat{Y}})\trans \mat{S}_{\mathrm{trob}}^{-1} (\mat{Y} - \widehat{\mat{Y}})
        \sim \chi^2_p
-    \]
+    \end{equation}
     \item This fully extends the \code{"mlm"} class
     \item Compatible with other  \code{mlm} extensions: \code{car:::Anova} and
 			\code{heplots::heplot}.

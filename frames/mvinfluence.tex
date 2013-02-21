@@ -12,8 +12,18 @@
     The \package{mvinfluence} now provides:
     \begin{itemize}
     \item Calculation for multivariate analogs of univariate influence measures
-    (following Barrett \& Ling, 1992)
-    \item Provides deletion diagnostics for subsets of size $m \ge 1$.
+    (following Barrett \& Ling, 1992), e.g., Hat values \& Cook's $D$:
+    \begin{equation}
+    	H_I = \mat{X}_I
+    	      (\mat{X}\trans\mat{X})^{-1}
+    	      \mat{X}_I\trans
+    \end{equation}
+    \begin{equation}
+    	D_I = [vec(\mat{B} - \mat{B}_{(I)})]\trans
+    	      [\mat{S}^{-1} \otimes (\mat{X}\trans\mat{X})]
+    	      [vec(\mat{B} - \mat{B}_{(I)})]
+    \end{equation}
+    \item Provides deletion diagnostics for subsets $(I)$ of size $m \ge 1$.
     \item e.g., $m=2$ can reveal cases of \alert{masking} or \alert{joint influence}.
     \item Extension of \code{influencePlot()} to the multivariate case.
     \item A new plot format: leverage-residual (LR) plots.
@@ -45,7 +55,7 @@
     \begin{column}{.5\textwidth}
 	  \begin{itemize}
 	    \item Main idea: Influence $\sim$ Leverage (L) $\times$ Residual (R)
-			\item $\implies log (\mathrm{Infl}) = log(L) + log(R)$
+			\item $\implies \log (Infl) = \log(L) + \log(R)$
 			\item $\implies$ contours of constant influence 
 			lie on lines with slope = -1.
 			\item Bubble size $\sim$ influence (Cook's $D$)
