@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.12pt}
+\beamer@endinputifotherversion {3.07pt}
 \beamer@sectionintoc {1}{Background}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Visual overview}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Data ellipses}{17}{0}{1}
@@ -8,10 +8,10 @@
 \beamer@subsectionintoc {2}{1}{Visualizing H and E (co)variation}{29}{0}{2}
 \beamer@subsectionintoc {2}{2}{MANOVA designs}{32}{0}{2}
 \beamer@subsectionintoc {2}{3}{MREG designs}{39}{0}{2}
-\beamer@sectionintoc {3}{Reduced-rank displays}{45}{0}{3}
-\beamer@subsectionintoc {3}{1}{Low-D displays of high-D data}{46}{0}{3}
-\beamer@subsectionintoc {3}{2}{Canonical discriminant HE plots}{49}{0}{3}
-\beamer@sectionintoc {4}{Recent extensions}{53}{0}{4}
-\beamer@subsectionintoc {4}{1}{Robust MLMs}{54}{0}{4}
-\beamer@subsectionintoc {4}{2}{Influence diagnostics for MLMs}{56}{0}{4}
-\beamer@sectionintoc {5}{Conclusions}{59}{0}{5}
+\beamer@sectionintoc {3}{Reduced-rank displays}{46}{0}{3}
+\beamer@subsectionintoc {3}{1}{Low-D displays of high-D data}{47}{0}{3}
+\beamer@subsectionintoc {3}{2}{Canonical discriminant HE plots}{50}{0}{3}
+\beamer@sectionintoc {4}{Recent extensions}{54}{0}{4}
+\beamer@subsectionintoc {4}{1}{Robust MLMs}{55}{0}{4}
+\beamer@subsectionintoc {4}{2}{Influence diagnostics for MLMs}{57}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{60}{0}{5}
