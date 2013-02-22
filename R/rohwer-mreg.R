@@ -68,8 +68,9 @@ par(op)
 #-- ANCOVA, assuming equal slopes
 rohwer.mod <- lm(cbind(SAT, PPVT, Raven) ~ SES + n + s + ns + na + ss, data=Rohwer)
 Anova(rohwer.mod)
-col <- c("red", "black", "blue", "cyan", "magenta", "brown", "gray")
+col <- c("red", "black", "gray", "cyan", "magenta", "brown", "darkgreen", "blue")
 
+op <- par(mar=c(4,4,1,1)+.1)
 heplot(rohwer.mod, col=col, xlab="Student Achievement Test",
 	ylab="Peabody Picture Vocabulary Test", cex.lab=1.25, cex=1.25)
 
@@ -77,5 +78,9 @@ heplot(rohwer.mod, col=col, xlab="Student Achievement Test",
 heplot(rohwer.mod, hypotheses=list("Regr" = c("n", "s", "ns", "na", "ss")), 
 	xlab="Student Achievement Test",
 	ylab="Peabody Picture Vocabulary Test", 
-	cex.lab=1.25, cex=1.25
+	cex.lab=1.25, cex=1.25,
 	col=col, fill=TRUE, fill.alpha=0.1)
+
+dev.copy2pdf(file="rohwer-mreg3.pdf", height=6, width=6)
+
+par(op)
