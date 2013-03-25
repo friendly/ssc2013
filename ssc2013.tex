@@ -44,7 +44,8 @@
 }
 %\institute{York University}
 \date[SSC] % (optional)
-{May 26--29, 2013, SSC annual Meeting}
+%{May 26--29, 2013, SSC annual Meeting}
+{Statistics Day @ York, April 5, 2013}
 
 
 \subject{Visualizing MLMs}
@@ -93,6 +94,7 @@
 
 \section{Background}
 %\subsection{The LM family and friends}
+\input{frames/precepts}
 \subsection{Visual overview}
 \input{frames/intro}
 \input{frames/overview}
@@ -128,7 +130,7 @@
 \input{frames/mreg}
 
 \section{Reduced-rank displays}
-\begin{frame}<beamer>
+\begin{frame}<beamer>[label=lowrank]
   \frametitle{Outline}
 	\begin{columns}[c]
 	  \begin{column}{.6\textwidth}
@@ -161,6 +163,11 @@
 	  \end{column}
 	\end{columns}
 \end{frame}
+
+\subsection{Canonical correlation}
+\input{frames/cancor}
+\input{frames/rohwer-cancor-ex}
+
 \subsection{Robust MLMs}
 \input{frames/robust}
 \subsection[Influence diagnostics]{Influence diagnostics for MLMs}

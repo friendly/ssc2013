@@ -1,17 +1,18 @@
 \beamer@endinputifotherversion {3.07pt}
 \beamer@sectionintoc {1}{Background}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Visual overview}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Data ellipses}{17}{0}{1}
-\beamer@subsectionintoc {1}{3}{The Multivariate Linear Model}{22}{0}{1}
-\beamer@subsectionintoc {1}{4}{Motivating example}{24}{0}{1}
-\beamer@sectionintoc {2}{Hypothesis-Error (HE) plots}{28}{0}{2}
-\beamer@subsectionintoc {2}{1}{Visualizing H and E (co)variation}{29}{0}{2}
-\beamer@subsectionintoc {2}{2}{MANOVA designs}{32}{0}{2}
-\beamer@subsectionintoc {2}{3}{MREG designs}{39}{0}{2}
-\beamer@sectionintoc {3}{Reduced-rank displays}{46}{0}{3}
-\beamer@subsectionintoc {3}{1}{Low-D displays of high-D data}{47}{0}{3}
-\beamer@subsectionintoc {3}{2}{Canonical discriminant HE plots}{50}{0}{3}
-\beamer@sectionintoc {4}{Recent extensions}{54}{0}{4}
-\beamer@subsectionintoc {4}{1}{Robust MLMs}{55}{0}{4}
-\beamer@subsectionintoc {4}{2}{Influence diagnostics for MLMs}{57}{0}{4}
-\beamer@sectionintoc {5}{Conclusions}{60}{0}{5}
+\beamer@subsectionintoc {1}{1}{Visual overview}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Data ellipses}{20}{0}{1}
+\beamer@subsectionintoc {1}{3}{The Multivariate Linear Model}{25}{0}{1}
+\beamer@subsectionintoc {1}{4}{Motivating example}{27}{0}{1}
+\beamer@sectionintoc {2}{Hypothesis-Error (HE) plots}{31}{0}{2}
+\beamer@subsectionintoc {2}{1}{Visualizing H and E (co)variation}{32}{0}{2}
+\beamer@subsectionintoc {2}{2}{MANOVA designs}{35}{0}{2}
+\beamer@subsectionintoc {2}{3}{MREG designs}{42}{0}{2}
+\beamer@sectionintoc {3}{Reduced-rank displays}{49}{0}{3}
+\beamer@subsectionintoc {3}{1}{Low-D displays of high-D data}{50}{0}{3}
+\beamer@subsectionintoc {3}{2}{Canonical discriminant HE plots}{53}{0}{3}
+\beamer@sectionintoc {4}{Recent extensions}{57}{0}{4}
+\beamer@subsectionintoc {4}{1}{Canonical correlation}{58}{0}{4}
+\beamer@subsectionintoc {4}{2}{Robust MLMs}{60}{0}{4}
+\beamer@subsectionintoc {4}{3}{Influence diagnostics for MLMs}{62}{0}{4}
+\beamer@sectionintoc {5}{Conclusions}{65}{0}{5}

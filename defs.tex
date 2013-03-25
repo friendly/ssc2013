@@ -51,11 +51,12 @@
 \newcommand{\df} {degrees of freedom}
 \newcommand{\PROC}[1]{{\texttt{PROC #1}}}
 
+% R stuff
 \let\code=\texttt
 \let\proglang=\textsf
 \newcommand{\pkg}[1]{{\normalfont\fontseries{b}\selectfont #1}}
 \newcommand{\package}[1]{\pkg{#1} package}
-
+\newcommand{\func}[1]{\texttt{#1()}}
 
 \newcommand*{\LM}{LM}
 \newcommand*{\MLM}{MLM}
@@ -72,3 +73,4 @@
 \DefineVerbatimEnvironment{CodeOutput}{Verbatim}{fontseries=b,fontsize=\small,formatcom=\color{blue}}
 
 \newtheorem{conjecture}[theorem]{Conjecture}
+\newcommand{\epigraph}[2]{\begin{quotation}\small``\emph{#1}'' --- #2\end{quotation}}

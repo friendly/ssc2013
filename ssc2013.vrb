@@ -1,0 +1,24 @@
+\frametitle {CCA Example: Rohwer data, Ability and PA tests}
+\begin{itemize*}
+\item \func{plot} method shows canonical variates for $\mat{X}$ and $\mat{Y}$ on one dimension
+\item Smoother shows possible non-linearity
+\item Point identification highlights unusual observations
+\end{itemize*}
+\begin{CodeInput}[baselinestretch=0.75]
+R> library(candisc)
+R> cc <- cancor(cbind(SAT, PPVT, Raven) ~ n + s + ns + na + ss,
++          data=Rohwer, set.names=c("PA", "Ability"))
+R> plot(cc, smooth=TRUE, id.n=3)
+R> plot(cc, smooth=TRUE, id.n=3, which=2)
+\end{CodeInput}
+
+% two figs side-by-side
+  \hfill
+  \begin{minipage}[c]{.35\textwidth}
+   \includegraphics[width=1\linewidth,clip]{figures/rohwer-cancor}
+   \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{.35\textwidth}
+   \includegraphics[width=1\linewidth,clip]{figures/rohwer-cancor2}
+  \end{minipage}
+  \hfill
