@@ -2,13 +2,13 @@
   \frametitle{Influence diagnostics for MLMs}
 
   \begin{itemize}
-  \item Influence measures and diagnostic plots are well-developed for univariate LMs
+  \item<1-> Influence measures and diagnostic plots are well-developed for univariate LMs
     \begin{itemize}
     \item Influence measures: Cook's D, DFFITS, dfbetas, etc.
     \item Diagnostic plots:  Index plots, \code{car:::influencePlot()} for LMs
     \item However, these are have been unavailable for MLMs  
     \end{itemize}
-  \item
+  \item<2->
     The \package{mvinfluence} now provides:
     \begin{itemize}
     \item Calculation for multivariate analogs of univariate influence measures
@@ -26,7 +26,7 @@
     \item Provides deletion diagnostics for subsets $(I)$ of size $m \ge 1$.
     \item e.g., $m=2$ can reveal cases of \alert{masking} or \alert{joint influence}.
     \item Extension of \code{influencePlot()} to the multivariate case.
-    \item A new plot format: leverage-residual (LR) plots.
+    \item A new plot format: \alert{leverage-residual (LR) plots}.
     \end{itemize}
   \end{itemize}
 \end{frame}

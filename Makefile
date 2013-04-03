@@ -73,7 +73,7 @@ handout:	$(SRC).tex
 #		dvipdf $(HANDOUT_SRC)
 #		pdfnup --nup "2x3" --offset ".25cm .25cm" --delta ".25cm .5cm" --frame true --scale 0.9 --outfile $(HANDOUT_SRC)6up.pdf  $(HANDOUT_SRC).pdf 
 		pdfnup $(NUP) $(NUPOPTS) $(HANDOUT_SRC).pdf 
-		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf,aux}
+		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf,aux,vrb}
 
 # create handouts, for the people to print
 handout12:	$(SRC).tex
@@ -82,7 +82,7 @@ handout12:	$(SRC).tex
 		$(LATEX) $(LATEXFLAGS) $(HANDOUT_SRC).tex
 #		dvipdf $(HANDOUT_SRC)
 		pdfnup $(NUP12) $(NUPOPTS) $(HANDOUT_SRC).pdf 
-		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf}
+		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf,aux,vrb}
 
 # create handouts, for the people to print
 handout23:	$(SRC).tex

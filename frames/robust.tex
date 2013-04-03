@@ -2,14 +2,14 @@
   \frametitle{Robust MLMs}
 
   \begin{itemize}
-  \item \proglang{R} has a large collection of packages dealing with robust estimation:
+  \item<1-> \proglang{R} has a large collection of packages dealing with robust estimation:
     \begin{itemize}
     \item \code{robust::lmrob()}, \code{MASS::rlm()}, for univariate LMs
     \item \code{robust::glmrob()} for univariate \emph{generalized} LMs
     \item \alert{High breakdown-bound} methods for robust PCA and robust covariance estimation
     \item However, none of these handle the \alert{fully general MLM}  
     \end{itemize}
-  \item
+  \item<2->
     The \package{heplots} now provides \code{robmlm()} for robust MLMs:
     \begin{itemize}
     \item Uses a simple M-estimtor via iteratively re-weighted LS.
@@ -43,12 +43,15 @@
 
 % two figs side-by-side
   \begin{minipage}[c]{.5\textwidth}
-   \includegraphics[width=1\linewidth,clip]{figures/pottery-weights}
+   \includegraphics<1->[width=1\linewidth,clip]{figures/pottery-weights}
    \end{minipage}%
   \hfill
   \begin{minipage}[c]{.5\textwidth}
-   \includegraphics[width=1\linewidth,clip]{figures/pottery-robust}
+   \includegraphics<2->[width=1\linewidth,clip]{figures/pottery-robust}
   \end{minipage}
 
-The $\mat{E}$ ellipse is considerably reduced, enhancing apparent significance 
+\begin{itemize*}
+\item<1>Some observations are given weights $\sim$ 0
+\item<2>The $\mat{E}$ ellipse is considerably reduced, enhancing apparent significance 
+\end{itemize*}
 \end{frame}
