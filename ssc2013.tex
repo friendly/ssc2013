@@ -12,6 +12,31 @@
   % or whatever (possibly just delete it)
 %\setbeamercolor{alerted text}{fg=blue!80!black}
 %\addfootbox{structure}{\tiny \Filename}
+
+% Sections in Header:
+\setbeamertemplate{headline}
+{%
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt \hfill \insertsectionnavigationhorizontal{\linewidth}{}{}  \hfill  \vskip2pt
+  \end{beamercolorbox}%
+}
+% Authors, Date, Slide Numbers on Footer
+\defbeamertemplate*{footline}{infolines}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
 }
 
 \mode<handout>

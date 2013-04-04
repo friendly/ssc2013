@@ -30,12 +30,12 @@ Na   -5.4    5.3    4.7  0.15  0.26
  \end{column}
  \begin{column}{0.45\textwidth}
  	\begin{itemize}
- 		\item \mat{E} matrix:  Within-group (co)variation of residuals
+ 		\item \alert{\mat{E} matrix}:  Within-group (co)variation of residuals
  			\begin{itemize*}
  				\item diag:  SSE for each variable
  				\item off-diag:  $\sim$ partial correlations
  		  \end{itemize*}
- 		\item \mat{H} matrix:  Between-group (co)variation of means
+ 		\item \alert{\mat{H} matrix}:  Between-group (co)variation of means
  			\begin{itemize*}
  				\item diag:  SSH for each variable
  				\item off-diag:  $\sim$ correlations of means
@@ -59,9 +59,9 @@ Na   -5.4    5.3    4.7  0.15  0.26
 			\begin{itemize*}
 			\item<1-> Centered at grand means $\rightarrow$ show factor means in same plot.
 			\end{itemize*}
-		\item<1-> ``Effect size'' scaling-- $\H / df_e$ $\rightarrow$
+		\item<1-> ``\alert{Effect size}'' scaling-- $\H / df_e$ $\rightarrow$
 		data ellipse of fitted values.
-		\item<2-> ``Significance'' scaling-- H ellipse protrudes beyond
+		\item<2-> ``\alert{Significance}'' scaling-- H ellipse protrudes beyond
 		E ellipse \emph{iff} $H_0$ can be rejected by Roy maximum root test
 			\begin{itemize*}
 			\item $H / ( \lambda_\alpha df_e )$ where $\lambda_\alpha$
@@ -97,8 +97,19 @@ Na   -5.4    5.3    4.7  0.15  0.26
 		$s = \min( p, df_h)$ dimensions
 		\item<2-> Linear hypotheses, of the form 
 		$H_0 : \mat{C}_{h \times q} \, \vec{B}_{q \times p} = \mat{0}_{h \times p}$
-		\implies sub-ellipsoid of dimension $h$
-		\item<3-> 1D tests and contrasts \implies degenerate 1D ellipses (lines)
+		\implies sub-ellipsoid of dimension $h$, e.g., 2 df test:
+		\[ \mat{C} = 
+		\begin{bmatrix}
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 0 
+		\end{bmatrix}
+		\]
+		\item<3-> 1D tests and contrasts \implies degenerate 1D ellipses (\alert{lines})
+		\item<3-> Geometry: 
+		  \begin{itemize*}
+		  \item Sub-hypotheses are tangent to enclosing hypotheses
+		  \item Orthogonal contrasts form \alert{conjugate axes}
+		  \end{itemize*}
 	  \end{itemize}
     \end{column}
     \begin{column}{.4\textwidth}
