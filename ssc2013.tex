@@ -72,8 +72,8 @@
 }
 %\institute{York University}
 \date[SSC] % (optional)
-%{May 26--29, 2013, SSC annual Meeting}
-{Statistics Day @ York, April 5, 2013}
+{May 26--29, 2013, SSC annual Meeting}
+%{Statistics Day @ York, April 5, 2013}
 
 
 \subject{Visualizing MLMs}
@@ -106,6 +106,7 @@
 \end{frame}
 
 \begin{frame}
+  \transboxin
   \frametitle{Outline}
 	\begin{columns}[c]
 	  \begin{column}{.6\textwidth}
@@ -116,13 +117,15 @@
 	  \end{column}
 	\end{columns}
 	\begin{center}
-	  Slides: \url{http://datavis.ca/papers/ssc2013/}
+	  Slides \& R scripts: \url{http://datavis.ca/papers/ssc2013/}
 	\end{center}
 \end{frame}
 
 \section{Background}
 %\subsection{The LM family and friends}
+\mode<\inlong>{
 \input{frames/precepts}
+}
 \subsection{Visual overview}
 \input{frames/intro}
 \input{frames/overview}
@@ -139,6 +142,7 @@
 
 \section{Hypothesis-Error (HE) plots}
 \begin{frame}<beamer>
+  \transglitter
   \frametitle{Outline}
 	\begin{columns}[c]
 	  \begin{column}{.6\textwidth}
@@ -159,6 +163,7 @@
 
 \section{Reduced-rank displays}
 \begin{frame}<beamer>[label=lowrank]
+  \transsplithorizontalin
   \frametitle{Outline}
 	\begin{columns}[c]
 	  \begin{column}{.6\textwidth}
@@ -180,6 +185,7 @@
 
 \section{Recent extensions}
 \begin{frame}<beamer>
+  \transsplithorizontalout
   \frametitle{Outline}
 	\begin{columns}[c]
 	  \begin{column}{.6\textwidth}
