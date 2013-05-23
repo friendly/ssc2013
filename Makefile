@@ -35,9 +35,9 @@ NOTES_SRC = $(SRC)-notes
 PDFNUP = pdfnup
 NUP = --nup 2x2 --landscape --suffix '2x2'
 NUP12 = --nup 1x2 --no-landscape --suffix '1x2'
-NUP23 = --nup 2x3 --orient portrait 
-NUP33 = --nup 3x3 --landscape 
-NUP44 = --nup 4x4 --landscape 
+NUP23 = --nup 2x3 --orient portrait --suffix '2x3'
+NUP33 = --nup 3x3 --landscape --suffix '3x3'
+NUP44 = --nup 4x4 --landscape --suffix '4x4' 
 NUPOPTS = --paper letterpaper --frame true --delta "2mm 2mm"
 
 # normally we just want to create the slides
@@ -71,7 +71,6 @@ handout:	$(SRC).tex
 		$(LATEX) $(LATEXFLAGS) $(HANDOUT_SRC).tex
 		$(LATEX) $(LATEXFLAGS) $(HANDOUT_SRC).tex
 #		dvipdf $(HANDOUT_SRC)
-#		pdfnup --nup "2x3" --offset ".25cm .25cm" --delta ".25cm .5cm" --frame true --scale 0.9 --outfile $(HANDOUT_SRC)6up.pdf  $(HANDOUT_SRC).pdf 
 		pdfnup $(NUP) $(NUPOPTS) $(HANDOUT_SRC).pdf 
 		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf,aux,vrb}
 
@@ -100,7 +99,7 @@ handout33:	$(SRC).tex
 		$(LATEX) $(LATEXFLAGS) $(HANDOUT_SRC).tex
 #		dvipdf $(HANDOUT_SRC)
 		pdfnup $(NUP33) $(NUPOPTS) $(HANDOUT_SRC).pdf 
-		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf}
+		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf,aux,vrb}
 
 # create handouts, for the people to print
 handout44:	$(SRC).tex
@@ -109,7 +108,7 @@ handout44:	$(SRC).tex
 		$(LATEX) $(LATEXFLAGS) $(HANDOUT_SRC).tex
 #		dvipdf $(HANDOUT_SRC)
 		pdfnup $(NUP44) $(NUPOPTS) $(HANDOUT_SRC).pdf 
-		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf}
+		rm -f $(HANDOUT_SRC).{tex,nav,log,out,snm,toc,dvi,pdf,aux,vrb}
 
 # delete the logs
 clean:		
